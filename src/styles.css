@@ -1,0 +1,166 @@
+*{
+  margin:0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body,html{
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+body{
+  background-image: url(./assets/background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+
+}
+
+a{
+  display: block;
+}
+
+.cont-card{
+  margin:7rem auto 0 auto;
+  color:white;
+  display: flex;
+  flex-direction: column;
+  width: 16rem;
+}
+
+.card-body{
+  background-color:white;
+  padding:0.8rem;
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  color:#5256A1;
+}
+
+.card-title{
+  font-weight: bold;
+  font-size: 18px;
+  margin: 8px 0;
+  letter-spacing: 2px;
+}
+
+.img{
+  max-width: 80px;
+  align-self: flex-end;
+  margin: -43px 0 1rem 0;
+}
+
+.cont-card h4{
+  font-size: 15px;
+  font-weight: bold;
+}
+
+ul li{
+  width: 100%;
+  padding: 0.5rem;
+  border: solid 1px #5256A1;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  margin:0.7rem 0;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+ul li:hover{
+  background-color: orange;
+  color: white;
+  border-color: orange;
+}
+
+li .opc{
+  margin-right: 1rem;
+  font-size: 13px;
+}
+
+.btn{
+  color:white;
+  background-color: orange;
+  border-radius: 5px;
+  border:none;
+  padding: 0.5rem 1.2rem;
+  font-weight: bold;
+  width: max-content;
+  align-self: flex-end;
+  font-size: 13px;
+  cursor: pointer;
+  display: none;
+}
+
+.correcto{
+  background-color: rgb(67, 180, 92);
+  color: white;
+  border-color: rgb(67, 180, 92);
+}
+
+.incorrecto{
+  background-color: rgb(219, 67, 87);
+  color: white;
+  border-color: rgb(219, 67, 87);
+}
+
+.center{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center *{
+  width: max-content;
+}
+
+.img-final{
+  width: 150px;
+  margin: 1rem auto 2.5rem auto;
+}
+
+.center h2{
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.center span span{
+  color: rgb(67, 180, 92);
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.center button{
+  margin: 2rem 0 1rem 0;
+  padding: 0.5rem 1.5rem;
+  border: solid 2px #5256A1;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  background-color: transparent;
+  color: #5256A1;
+}
+
+.center button:hover{
+  background-color: orange;
+  color: white;
+  border-color: orange;
+}
+
+.visible{
+  display: block;
+}
+
+.flag{
+  width: 55px;
+  box-shadow: 0 0 6px #5256A1;
+  margin-bottom: 0.8rem;
+}

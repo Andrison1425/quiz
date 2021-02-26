@@ -1,0 +1,46 @@
+<div
+  class="card-body"
+
+>
+  <div
+    style="display: contents;"
+    *ngIf="preguntaActual<4;else pantallaFinal"
+  >
+    <img
+      src="../../../assets/undraw_adventure_4hum 1.svg"
+      alt="img"
+      class="img"
+    >
+    <h4>{{opciones[preguntaActual].titulo}}</h4>
+
+    <ul>
+      <li *ngFor="let opcion of opciones[preguntaActual].options;index as i"
+        (click)="selectOption(opcion)"
+        [class]="opcion.class"
+      >
+        <span class="opc">{{i+1 | letra}}</span>
+        <span>{{opcion.title}}</span>
+      </li>
+
+    </ul>
+
+    <button
+      [class]="next?'btn visible':'btn'"
+      (click)="avanzar()"
+    >
+      Next
+    </button>
+  </div>
+</div>
+
+<ng-template #pantallaFinal>
+  <div class="center">
+    <img src="../../../assets/undraw_winners_ao2o 2.svg" class="img-final" />
+    <h2>Results</h2>
+    <span>You got <span>{{puntos}}</span> correct answers</span>
+
+    <button (click)="tryAgain()">
+      Try again
+    </button>
+  </div>
+</ng-template>
