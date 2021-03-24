@@ -15,6 +15,7 @@ export class PorBanderaComponent implements OnInit {
   preguntaActual:number=0;
   preguntaMostrar:number=0;
   next:boolean=false;
+  loading:boolean=true;
 
   opciones:IPregunta[]=[];
 
@@ -55,6 +56,7 @@ export class PorBanderaComponent implements OnInit {
   ngOnInit(): void {
     this.preguntasService.obtenerDatos()
       .subscribe(datos=>{
+        this.loading=false;
         this.opciones=this.preguntasService.cargarOpciones('bandera',datos);
         this.preguntasService.datos=datos;
       }//cierre suscribe

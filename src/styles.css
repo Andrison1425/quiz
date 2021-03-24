@@ -17,7 +17,11 @@ body{
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
-
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 a{
@@ -25,7 +29,6 @@ a{
 }
 
 .cont-card{
-  margin:7rem auto 0 auto;
   color:white;
   display: flex;
   flex-direction: column;
@@ -163,4 +166,14 @@ li .opc{
   width: 55px;
   box-shadow: 0 0 6px #5256A1;
   margin-bottom: 0.8rem;
+}
+
+.mostrar-loading{
+  display: block;
+  width: 2rem;
+  height: 2rem;
+}
+
+.ocultar-loading{
+  display: none;
 }

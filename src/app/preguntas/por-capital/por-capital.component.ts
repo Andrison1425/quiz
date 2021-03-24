@@ -14,6 +14,7 @@ export class PorCapitalComponent implements OnInit {
   preguntaActual:number=0;
   preguntaMostrar:number=0;
   next:boolean=false;
+  loading:boolean=true;
 
   opciones:IPregunta[]=[];
 
@@ -54,6 +55,7 @@ export class PorCapitalComponent implements OnInit {
   ngOnInit(): void {
     this.preguntasService.obtenerDatos()
       .subscribe(datos=>{
+        this.loading=false;
         this.opciones=this.preguntasService.cargarOpciones('capital',datos);
         this.preguntasService.datos=datos;
       }//cierre suscribe

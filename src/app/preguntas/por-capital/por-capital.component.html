@@ -1,36 +1,43 @@
 <div
   class="card-body"
-
 >
-  <div
-    style="display: contents;"
-    *ngIf="preguntaActual<4;else pantallaFinal"
+  <img
+    src="../../../assets/loading.gif"
+    alt="Loading..."
+    class="mostrar-loading"
+    *ngIf="loading; else contenido"
   >
-    <img
-      src="../../../assets/undraw_adventure_4hum 1.svg"
-      alt="img"
-      class="img"
+  <ng-template #contenido>
+    <div
+      style="display: contents;"
+      *ngIf="preguntaActual<4; else pantallaFinal"
     >
-    <h4>{{opciones[preguntaActual].titulo}}</h4>
-
-    <ul>
-      <li *ngFor="let opcion of opciones[preguntaActual].options;index as i"
-        (click)="selectOption(opcion)"
-        [class]="opcion.class"
+      <img
+        src="../../../assets/undraw_adventure_4hum 1.svg"
+        alt="img"
+        class="img"
       >
-        <span class="opc">{{i+1 | letra}}</span>
-        <span>{{opcion.title}}</span>
-      </li>
+      <h4>{{opciones[preguntaActual].titulo}}</h4>
 
-    </ul>
+      <ul>
+        <li *ngFor="let opcion of opciones[preguntaActual].options;index as i"
+          (click)="selectOption(opcion)"
+          [class]="opcion.class"
+        >
+          <span class="opc">{{i+1 | letra}}</span>
+          <span>{{opcion.title}}</span>
+        </li>
 
-    <button
-      [class]="next?'btn visible':'btn'"
-      (click)="avanzar()"
-    >
-      Next
-    </button>
-  </div>
+      </ul>
+
+      <button
+        [class]="next?'btn visible':'btn'"
+        (click)="avanzar()"
+      >
+        Next
+      </button>
+    </div>
+  </ng-template>
 </div>
 
 <ng-template #pantallaFinal>
